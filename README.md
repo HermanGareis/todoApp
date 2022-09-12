@@ -1,6 +1,6 @@
 # todoApp
 
-This is a todo app created using Spring Boot using an H2 database and Bootstrap.
+This is a todo app created with Spring Boot using an H2 database and Bootstrap.
 
 Screenshots:
 
