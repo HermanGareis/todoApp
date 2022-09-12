@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title> Todo App </title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.min.css} " />
+
+	<!-- Our css-->
+	<link rel="stylesheet" type="text/css" href="static/css/update-todo-item.css"
+		th:href="@{/css/update-todo-item.css}">
+
+
+</head>
+
+<body>
+
+
+	<nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand">
+			<p>Todo List |</p>
+		</a>
+	</nav>
+
+
+	<div class="container">
+		<h1 th:style="'color: rgb(160, 160, 160)'">Edit Todo Item</h1>
+		<form action="#" th:action="@{/todo/{id}(id=${todo.id})}" th:object="${todo}" method="POST">
+			<div class="form-group">
+				<input class="form-control" type="text" required="required" th:field="*{description}" id="description"
+					placeholder="Add a description">
+				<span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" th:checked="${complete} == true" th:field="*{complete}" id="complete" />
+					Complete
+				</label>
+			</div>
+
+			<button class="btn btn-success" type="submit">Update</button>
+			<a class="btn btn-warning" href="/">Cancel</a>
+			<input type="hidden" th:field="*{createdDate}" />
+			<input type="hidden" th:field="*{modifiedDate}" />
+		</form>
+
+	</div>
+
+</body>
+
+</html>

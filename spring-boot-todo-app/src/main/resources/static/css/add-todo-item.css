@@ -1,0 +1,48 @@
+body{
+	background-color: rgb(75, 75, 75);
+	}
+
+	
+
+#header{
+	background-color: rgb(37, 37, 37);
+	border-bottom: 1px solid #dfe1e5;
+}
+
+#header .navbar-brand a{
+	justify-content: center;
+	
+}
+
+#header .navbar-brand p{
+    text-align: center;
+    top: 8px;
+    color: rgb(160, 160, 160);
+    font-family: "Fantasy", Copperplate, fantasy; 
+    font-size: 30px;
+    
+}
+
+
+#header p1{
+    color: rgb(160, 160, 160);
+    top: 20px;
+    font-size: 18px;
+    position: fixed;
+    justify-content: center;
+    left: 145px;
+
+}
+
+.container{
+	background-color:rgb(37, 37, 37);
+	border: 1px solid #dfe1e5;
+	border-radius: 8px;
+	
+}
+
+.container form{
+	margin: 30px;
+}
+
+
